@@ -1,61 +1,30 @@
-
-
 function newPrice(currentPrice , discount ) {
-
 if(typeof currentPrice != "number" || typeof discount != "number"){
-
 return "Invalid"
-
 }
-
 if(discount < 0 || discount > 100){
-
 return "Invalid"
-
 }
 
 let cut = currentPrice * discount / 100
-
 let result = currentPrice - cut
-
 return result.toFixed(3)
-
 }
-
-/*function signature/sample */
 
 function validOtp(otp) {
-
-// You have to write your code here
-
 if(typeof otp !== "string"){
-
 return "Invalid"
-
 }
-
 if(otp.startsWith("ph-") && otp.length === 8){
-
 return true
-
 }else{
-
 return false
-
 }
-
 }
-
-/*function signature/sample */
 
 function finalScore (omr) {
-
-//write your code here
-
 if(typeof omr !== "object" || Array.isArray(omr) || omr === null){
-
 return "Invalid"
-
 }
 
 let sum = omr.right + omr.wrong + omr.skip
